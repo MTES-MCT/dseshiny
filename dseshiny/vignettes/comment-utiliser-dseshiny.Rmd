@@ -1,0 +1,17 @@
+---
+title: "comment-utiliser-dseshiny"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{comment-utiliser-dseshiny}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Package d'aide à la construction d'applications shiny conforme au design systeme état
+
+[lien vers le système de design de l'état](https://www.systeme-de-design.gouv.fr/)
+
+
+```{r setup}
+library(dseshiny)
+```

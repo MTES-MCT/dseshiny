@@ -1,0 +1,18 @@
+Package: dseshiny
+Title: package qui aide a construire une application shiny conforme au design systeme etat francais
+Version: 0.0.0.1002
+Authors@R: 
+    person("Olivier", "Chantrel", , "olivier.chantrel@developpement-durable.gouv.fr", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: ce package contient des fonctions de generation et des fonctions reprenant les objets habituels shiny.
+License: GPL (>=3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports:
+	stringr,
+	rrapply
