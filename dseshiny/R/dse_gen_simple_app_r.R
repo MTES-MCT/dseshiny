@@ -8,6 +8,7 @@
 #' dse_gen_simple_app_r("C:/mesapplis/shiny/dse")
 #' @import stringr
 #' @export
+library(zip)
 dse_gen_simple_app_r <- function(chemin){
   if (dir.exists(chemin)) {
     print("Le chemin fournit en parametre de la fonction existe deja, veuillez fournir un chemin qui n existe pas deja")
