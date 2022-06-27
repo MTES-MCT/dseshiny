@@ -6,11 +6,9 @@
 
 
 ```
-# Installation depuis gitlab MTE
-library(devtools) 
-devtools::install_gitlab( 
-  repo="olivier.chantrel/dseshiny", 
-  host="https://gitlab-forge.din.developpement-durable.gouv.fr") 
+# Installation depuis git'hub MTE
+library(remotes) 
+remotes::install_github("MTES-MCT/dseshiny/dseshiny")
 ```
 
 ## Générer une appli RShiny
