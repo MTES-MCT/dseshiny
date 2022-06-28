@@ -17,6 +17,3 @@ la fonction construit un repertoire qui contient l'application
 generateur d une application shiny simple au format app.R
 dans un repertoire
 }
-\examples{
-dse_gen_simple_app_r("C:/mesapplis/shiny/dse")
-}
