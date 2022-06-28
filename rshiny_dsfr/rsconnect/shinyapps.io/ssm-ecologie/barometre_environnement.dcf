@@ -1,0 +1,13 @@
+name: barometre_environnement
+title: barometre_environnement
+username:
+account: ssm-ecologie
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6355883
+bundleId: 6032459
+url: https://ssm-ecologie.shinyapps.io/barometre_environnement/
+when: 1655908861.54364
+lastSyncTime: 1655908861.54364
+asMultiple: FALSE
+asStatic: FALSE

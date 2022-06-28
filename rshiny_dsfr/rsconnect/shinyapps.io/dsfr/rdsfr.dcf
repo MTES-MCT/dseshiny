@@ -1,0 +1,13 @@
+name: rdsfr
+title: rdsfr
+username:
+account: dsfr
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6499338
+bundleId: 6036089
+url: https://dsfr.shinyapps.io/rdsfr/
+when: 1655992494.2019
+lastSyncTime: 1655992494.2019
+asMultiple: FALSE
+asStatic: FALSE
