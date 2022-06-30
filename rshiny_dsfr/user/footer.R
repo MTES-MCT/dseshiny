@@ -27,7 +27,7 @@ footer <- tags$html(
         tags$div(class="fr-footer__brand fr-enlarge-link",
           tags$p(class='fr-logo', organismeSite),
           
-            tags$a(class="fr-footer__brand-link", href="/", title=titreonglet,
+            tags$a(class="fr-footer__brand-link", href="?home", title=titreonglet,
               if (afficherSL == "oui"){tags$img(class="fr-footer__logo fr-responsive-img", style="max-width:12.5rem", src=SL, alt=altSL, width="120", height="120")
             }
           )

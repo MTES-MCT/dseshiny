@@ -7,12 +7,7 @@
 #    http://shiny.rstudio.com/
 #
 library(shiny)
-library(shinydashboard)
-library(shinydashboardPlus)
-library(plotly)
-library(htmlwidgets)
-library(DT)
-
+# Mettre vos librairies ci-dessous
 
 # Configuration des variables du DSFR et des composants à afficher
 source("user/variables_dsfr.R",encoding = "UTF-8",local=T)
@@ -65,10 +60,10 @@ server <- function(input, output, session) {
         # Consentement des cookies
         includeHTML("user/cookies-consent.Rhtml"),
         tags$script(servicesCookies),
-        includeHTML("user/messcripts.Rhtml")
-
+        includeHTML("user/messcripts.Rhtml") 
+        
       )                                           #    rest of the page to this output$
-
+      
    )
 
    # load server code for page specified in URL
@@ -84,16 +79,16 @@ server <- function(input, output, session) {
      output$pageStub <- renderUI(                       # erreur 404
        tags$div(class="fr-container ",
          tags$nav(role="navigation", class="fr-breadcrumb",
-           tags$button(class="fr-breadcrumb__btn", "Voir le fil d’Ariane"),
+           tags$button(class="fr-breadcrumb__button", "Voir le fil d’Ariane"),
            tags$div(class="fr-collapse", id="breadcrumb-1",
              tags$ol(class="fr-breadcrumb__list",
                tags$li(tags$a(class="fr-breadcrumb__link", href="/", "Accueil")),
                tags$li(tags$a(class="fr-breadcrumb__link", "Page non trouvée"))
-             )
+             )                
            )
-         ),
+         ),  
          tags$div(class="fr-grid-row fr-grid-row--center fr-grid-row--gutters  fr-mb-3v",
-           tags$div(class="fr-col-12 fr-col-md-8",
+           tags$div(class="fr-col-12 fr-col-md-8", 
              tags$div(
                tags$h1(class="fr-h1", "Page non trouvée"),
                tags$p(class="fr-text--sm", "ERREUR 404"),
@@ -104,7 +99,7 @@ server <- function(input, output, session) {
            tags$div(class="fr-col-12 fr-col-md-4",
              tags$img(src="img/error_img.png", width="308", alt=""),
            ),
-           tags$a(href="/", tags$button(id="home", class="fr-btn", "Page d'accueil")), " ", tags$a(href="mailto:", style="background-image:none;", tags$button(class="fr-btn fr-btn--secondary", "Nous contacter"))
+           tags$a(href="/", tags$button(id="home", class="fr-btn", "Page d'accueil")), " ", tags$a(href="mailto:", style="background-image:none;", tags$button(class="fr-btn fr-btn--secondary", "Nous contacter")) 
          ),
          tags$br(),
        )

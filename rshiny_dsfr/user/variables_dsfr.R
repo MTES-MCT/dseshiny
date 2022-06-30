@@ -14,8 +14,8 @@
 
 #--------------------------------- Composants obligatoires ---------------------------------#
 
-#répertoire d'application
-repertoryApp <- "C:/Users/User/OneDrive/Documents/projet-dsfr-r-shiny/app0"
+#répertoire d'application pour le développement
+#repertoryApp <- "C:/Users/User/OneDrive/Documents/projet-dsfr-r-shiny/app0"
 
 #Variables globales (NE PAS MODIFIER)
 nomodule <- "nomodule"
@@ -28,12 +28,10 @@ datafrinjectsvg <- "data-fr-inject-svg"
 
 # URL valides
 validFiles = c("home.R",                             # valid files must be hardcoded here
-               "accessibilite.R", "mentionslegales.R",
-               "donneespersonnelles.R",
-               "presentation.R",
-               "questionnaire.R")              #    for security (use all lower-case
+               "accessibilite.R", "mentionslegales.R", 
+               "donneespersonnelles.R")              #    for security (use all lower-case
 # Url du site
-urlpage <- "https://urldevotresiteici.com"
+urlpage <- "https://localhost:xxxx/"
 
 # Nom de votre organisme edans le premier logo (Marianne). Ajouter autant de br() si votre nom est sur plusieurs lignes
 # Exemple : organismeSite <- tags$html("Ministère",br(),"de l'agriculture",br(), "et de la souveraineté",br(), "alimentaire")
@@ -54,21 +52,21 @@ activerDSFR <- "oui" #Choix "oui" / "non" -> Affiche ou non les élements header
 
 # Titre du site #
 afficherTitre <- "oui" # Choix : "oui" / "non" . Si vous souhaitez afficher le titre, modifiez le texte ci-dessous avec votre titre
-titresite <- "Opinions et pratiques environnementales des Français"
+titresite <- "Titre du site"
 
 # Titre apparaissant dans sur l'onglet de la page du navigateur
-titreonglet <- "Ministère de la transition écologique et de la cohésion des territoires - Opinions et pratiques environnementales des Français"
+titreonglet <- "Ministère de la transition écologique et de la cohésion des territoires - Titre du site"
 
 
 
 #Slogan
-afficherSlogan <- "non" # Choix : "oui" / "non" . Si vous souhaitez afficher le slogan modifiez le texte ci-dessous avec votre slogan
+afficherSlogan <- "oui" # Choix : "oui" / "non" . Si vous souhaitez afficher le slogan modifiez le texte ci-dessous avec votre slogan
 slogan <- "Votre slogan ici, laissez vide pour ne plus afficher"
 
 #Second logo
 afficherSL <- "oui" # Choix : "oui" / "non". Si vous avez un second logo, indiquez l'url de votre logo ci-dessous
-SL <- "img/logo-statpub.png" # Url de votre second logo
-altSL <- "Statistiques publiques" # Alternative textuelle si votre second logo ne s'affiche pas
+SL <- "img/sl.png" # Url de votre second logo
+altSL <- "Second logo" # Alternative textuelle si votre second logo ne s'affiche pas
 
 #Méta réseax sociaux (Opengraph, Twitter, DublinCore)
 afficherRS <- "non" # afficher les balises méta pour les réseaux sociaux (Opengraph, Twitter, DublinCore)
@@ -139,12 +137,11 @@ servicesCookies <- "(tarteaucitron.job = tarteaucitron.job || []).push('gajs');"
 #Vous pouvez si vous le souhaitez, masquer les composants ci-dessous qui n'apparaîtront pas sur votre page
 
 #Description apparaissant dans le footer
-afficherFD <- "non" # Choix "oui" / "non" -> Afficher la description ci-dessous dans le footer
-footerDesc <- HTML(paste(a(href='https://www.notre-environnement.gouv.fr/',"Commissariat général au développement durable"),br(),a(href='https://www.statistiques.developpement-durable.gouv.fr/',"Service des données et études statistiques"),br(),
-                         br(),"Coordination du baromètre : Eric Pautard (CGDD/SDES/SDIE)",br(),"Réalisation de l'outil de datavisualisation : Rodolphe Leveau (Université d'Orléans)"))
+afficherFD <- "oui" # Choix "oui" / "non" -> Afficher la description ci-dessous dans le footer
+footerDesc <- HTML(paste("Ceci est la descripton qui apparaît dans le footer. Elle n'est pas obligatoire . Vous pouvez choisir de l'afficher ou pas."))
 
 #Partenaires
-afficherBP <- "non" # Afficher le bloc partenaires (max 2 partenaires principaux et 3 partenaires secondaires)
+afficherBP <- "oui" # Afficher le bloc partenaires (max 2 partenaires principaux et 3 partenaires secondaires)
 titreBloc <- "Nos partenaires" # Titre du bloc partenaires
 # Partenaires principaux
 afficherPP1 <- "oui" # Afficher le partenaire principal 1
@@ -169,21 +166,21 @@ afficherHP <- "oui"
 
 ##### Page Accessibilité #####
 titreLienAccessibilite <- "Accessibilité: partiellement conforme"
-conformiteAffichee <- "est en conformité partielle" #3 arguments possibles :
+conformiteAffichee <- "est en conformité partielle" #3 arguments possibles : 
                                                     #- est en conformité
                                                     #- n'est pas en corformité
                                                     #- est en conformité partielle
 texteAccessibilite <- "Le Commissariat général au développement durable (CGDD), direction du ministère de la Transition écologique, s’engage à rendre son site internet accessible conformément à l’article 47 de la loi n°2005-102 du 11 février 2005. A cette fin, un schéma d’accessibilité numérique et son plan d’action est en cours d’élaboration."
 
 ##### Page Mentions légales #####
-editeur <- "Commissariat général au développement durable, CGDD, direction générale du Ministère de la transition écologique"
-directeurPublication <- "Monsieur Thomas Lesueur, Commissaire général au développement durable"
-hebergement <- HTML(paste("AVENIR TELEMATIQUE - ATE SAS",
+editeur <- "Commissariat général au développement durable, CGDD, direction générale du Ministère de la transition écologique et de la cohésion des territoires"
+directeurPublication <- "Nom du directeur de publication et service d'appartenance"
+hebergement <- HTML(paste("AVENIR TELEMATIQUE - ATE SAS", 
                           "21, avenue de la créativité - 59650 Villeneuve d’Ascq",
                           "Téléphone : 03 28 80 03 00",
                           "Site web : ", a(href="https://www.ate.info/", class="spip_url spip_out auto", rel="nofollow external", "https://www.ate.info/"), sep="<br>"))
 
-autoriserPRS <- "non" # Auorisation de partage sur les réseaux sociaux
+autoriserPRS <- "non" # Autorisation de partage sur les réseaux sociaux
 
 ################### Fin de Configuration des Variables DSFR ###################
 

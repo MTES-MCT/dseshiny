@@ -91,7 +91,7 @@ header <- tags$html(
                             tags$p(class='fr-logo', tags$html(organismeSite))
                     ),
                     if (afficherSL=="oui"){
-                      tags$a(class="fr-header__operator", href="/", title=titreonglet,
+                      tags$a(class="fr-header__operator", href="?home", title=titreonglet,
                         tags$img(class="fr-responsive-img", src=SL, alt="Second logo", width="120", height="120")
                       )
                     },
@@ -105,7 +105,7 @@ header <- tags$html(
               if (afficherTitre == "oui"){
                 tags$div(class='fr-header__service',
                   #Titre du site
-                  tags$a(href='/', title=titreonglet,
+                  tags$a(href='?home', title=titreonglet,
                         tags$h1(class='fr-header__service-title', titresite)
                   ),
                   # Votre slogan ci-dessous, mettre u # devant la ligne pour ne plus afficher le slogan
