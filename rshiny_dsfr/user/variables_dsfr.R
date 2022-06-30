@@ -27,9 +27,9 @@ datafrinjectsvg <- "data-fr-inject-svg"
 
 
 # URL valides
-validFiles = c("home.R",                             # valid files must be hardcoded here
-               "accessibilite.R", "mentionslegales.R", 
-               "donneespersonnelles.R")              #    for security (use all lower-case
+validFiles = c("rshiny_dsfr/home.R",                             # valid files must be hardcoded here
+               "rshiny_dsfr/accessibilite.R", "rshiny_dsfr/mentionslegales.R",
+               "rshiny_dsfr/donneespersonnelles.R")              #    for security (use all lower-case
 # Url du site
 urlpage <- "https://localhost:xxxx/"
 
@@ -65,7 +65,7 @@ slogan <- "Votre slogan ici, laissez vide pour ne plus afficher"
 
 #Second logo
 afficherSL <- "oui" # Choix : "oui" / "non". Si vous avez un second logo, indiquez l'url de votre logo ci-dessous
-SL <- "img/sl.png" # Url de votre second logo
+SL <- "rshiny_dsfr/www/img/sl.png" # Url de votre second logo
 altSL <- "Second logo" # Alternative textuelle si votre second logo ne s'affiche pas
 
 #Méta réseax sociaux (Opengraph, Twitter, DublinCore)
@@ -145,20 +145,20 @@ afficherBP <- "oui" # Afficher le bloc partenaires (max 2 partenaires principaux
 titreBloc <- "Nos partenaires" # Titre du bloc partenaires
 # Partenaires principaux
 afficherPP1 <- "oui" # Afficher le partenaire principal 1
-urlImgP1 <- "img/sl.png" # Url de votre partenaire principal 1
+urlImgP1 <- "rshiny_dsfr/www/img/sl.png" # Url de votre partenaire principal 1
 altP1 <- "Partenaire P1" # Alternative textuelle si votre image ne s'affiche pas
 afficherPP2 <- "oui" # Afficher le partenaire principal 2
-urlImgP2 <- "img/sl.png" # Url de votre partenaire principal 2
+urlImgP2 <- "rshiny_dsfr/www/img/sl.png" # Url de votre partenaire principal 2
 altP2 <- "Partenaire P2" # Alternative textuelle si votre image ne s'affiche pas
 # Partenaires secondaires
 afficherPS1 <- "oui" # Afficher le partenaire secondaire 1
-urlImgPS1 <- "img/sl.png" # Url de votre partenaire principal 2
+urlImgPS1 <- "rshiny_dsfr/www/img/sl.png" # Url de votre partenaire principal 2
 altPS1 <- "Partenaire PS1" # Alternative textuelle si votre image ne s'affiche pas
 afficherPS2 <- "oui" # Afficher le partenaire secondaire 2
-urlImgPS2 <- "img/sl.png" # Url de votre partenaire principal 2
+urlImgPS2 <- "rshiny_dsfr/www/img/sl.png" # Url de votre partenaire principal 2
 altPS2 <- "Partenaire PS2" # Alternative textuelle si votre image ne s'affiche pas
 afficherPS3 <- "oui" # Afficher le partenaire secondaire 3
-urlImgPS3 <- "img/sl.png" # Url de votre partenaire principal 2
+urlImgPS3 <- "rshiny_dsfr/www/img/sl.png" # Url de votre partenaire principal 2
 altPS3 <- "Partenaire PS3" # Alternative textuelle si votre image ne s'affiche pas
 
 # Autoriser l'affichage du bouton "revenir en haut de page"
@@ -166,7 +166,7 @@ afficherHP <- "oui"
 
 ##### Page Accessibilité #####
 titreLienAccessibilite <- "Accessibilité: partiellement conforme"
-conformiteAffichee <- "est en conformité partielle" #3 arguments possibles : 
+conformiteAffichee <- "est en conformité partielle" #3 arguments possibles :
                                                     #- est en conformité
                                                     #- n'est pas en corformité
                                                     #- est en conformité partielle
@@ -175,7 +175,7 @@ texteAccessibilite <- "Le Commissariat général au développement durable (CGDD
 ##### Page Mentions légales #####
 editeur <- "Commissariat général au développement durable, CGDD, direction générale du Ministère de la transition écologique et de la cohésion des territoires"
 directeurPublication <- "Nom du directeur de publication et service d'appartenance"
-hebergement <- HTML(paste("AVENIR TELEMATIQUE - ATE SAS", 
+hebergement <- HTML(paste("AVENIR TELEMATIQUE - ATE SAS",
                           "21, avenue de la créativité - 59650 Villeneuve d’Ascq",
                           "Téléphone : 03 28 80 03 00",
                           "Site web : ", a(href="https://www.ate.info/", class="spip_url spip_out auto", rel="nofollow external", "https://www.ate.info/"), sep="<br>"))

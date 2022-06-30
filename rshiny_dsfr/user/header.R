@@ -13,7 +13,7 @@
 #########                                                               #########
 #################################################################################
 # Configuration des variables du DSFR et des composants à afficher
-source("user/variables_dsfr.R",encoding = "UTF-8",local=T)
+source("rshiny_dsfr/user/variables_dsfr.R",encoding = "UTF-8",local=T)
 
 header <- tags$html(
   #### TAGS HEADER ##
@@ -48,20 +48,20 @@ header <- tags$html(
     if (afficherRS == "oui"){ tags$meta(name="DC.identifier", scheme="URI", content=dcidentifier)},
     if (afficherRS == "oui"){ tags$meta(name="DC.Language", scheme="RFC3066", content="fr-FR")},
     #REM Style DSFR
-    tags$link(rel="stylesheet", href="dsfr/dsfr.min.css", type = "text/css"),
-    
-    tags$link(rel="preload", href="dsfr/dsfr-theme-tac.css", as="style", onload="this.onload=null;this.rel=\'stylesheet\'"),
-    tags$noscript(tags$link(rel="stylesheet", href="dsfr/dsfr-theme-tac.css", type="text/css")),
-    
-      
-    tags$link(rel="stylesheet", href="dsfr/plugin-dse.css", type="text/css"),
-    tags$link(rel="stylesheet", href="dsfr/custom.css", type="text/css"),
-    tags$link(rel="stylesheet", href="dsfr/utility/icons/icons.css", type="text/css"),
+    tags$link(rel="stylesheet", href="rshiny_dsfr/www/dsfr/dsfr.min.css", type = "text/css"),
+
+    tags$link(rel="preload", href="rshiny_dsfr/www/dsfr/dsfr-theme-tac.css", as="style", onload="this.onload=null;this.rel=\'stylesheet\'"),
+    tags$noscript(tags$link(rel="stylesheet", href="rshiny_dsfr/www/dsfr/dsfr-theme-tac.css", type="text/css")),
+
+
+    tags$link(rel="stylesheet", href="rshiny_dsfr/www/dsfr/plugin-dse.css", type="text/css"),
+    tags$link(rel="stylesheet", href="rshiny_dsfr/www/dsfr/custom.css", type="text/css"),
+    tags$link(rel="stylesheet", href="rshiny_dsfr/www/dsfr/utility/icons/icons.css", type="text/css"),
     # Favicon
-    tags$link(rel="apple-touch-icon", href="dsfr/favicon/apple-touch-icon.png"),
-    tags$link(rel="icon", href="dsfr/favicon/favicon.svg"),
-    tags$link(rel="shortcut icon", href="dsfr/favicon/favicon.ico"),
-    tags$link(rel="manifest", href="dsfr/favicon/manifest.webmanifest", crossorigin="use-credentials"),
+    tags$link(rel="apple-touch-icon", href="rshiny_dsfr/www/dsfr/favicon/apple-touch-icon.png"),
+    tags$link(rel="icon", href="rshiny_dsfr/www/dsfr/favicon/favicon.svg"),
+    tags$link(rel="shortcut icon", href="rshiny_dsfr/www/dsfr/favicon/favicon.ico"),
+    tags$link(rel="manifest", href="rshiny_dsfr/www/dsfr/favicon/manifest.webmanifest", crossorigin="use-credentials"),
     # Scripts
   ),
   tags$body(class="front path-frontpage page-node-type-page",
@@ -160,8 +160,8 @@ header <- tags$html(
             )
           ),
           if (afficherMenu == "oui"){
-            includeHTML("user/menu.Rhtml")
-            #source("user/menu.R",encoding = "UTF-8",local=T)
+            includeHTML("rshiny_dsfr/user/menu.Rhtml")
+            #source("rshiny_dsfr/user/menu.R",encoding = "UTF-8",local=T)
           }
         )
       )

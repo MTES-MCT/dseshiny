@@ -14,10 +14,10 @@
 #################################################################################
 
 # Configuration des variables du DSFR et des composants à afficher
-source("user/variables_dsfr.R",encoding = "UTF-8",local=T)
+source("rshiny_dsfr/user/variables_dsfr.R",encoding = "UTF-8",local=T)
 footer <- tags$html(
   if (afficherHP == "oui"){
-    tags$div(class="scroll-top", 
+    tags$div(class="scroll-top",
       tags$a(class="fr-btn fr-fi-arrow-up-line scroll-top__link", href="#SELF#top", id="topbtn", "Haut de page"),
     )
   },
@@ -26,12 +26,12 @@ footer <- tags$html(
       tags$div(class="fr-footer__body",
         tags$div(class="fr-footer__brand fr-enlarge-link",
           tags$p(class='fr-logo', organismeSite),
-          
+
             tags$a(class="fr-footer__brand-link", href="?home", title=titreonglet,
               if (afficherSL == "oui"){tags$img(class="fr-footer__logo fr-responsive-img", style="max-width:12.5rem", src=SL, alt=altSL, width="120", height="120")
             }
           )
-          
+
         ),
 
         tags$div(class="fr-footer__content",
