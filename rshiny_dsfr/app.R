@@ -10,11 +10,11 @@ library(shiny)
 # Mettre vos librairies ci-dessous
 
 # Configuration des variables du DSFR et des composants à afficher
-source("user/variables_dsfr.R",encoding = "UTF-8",local=T)
+source("rshiny_dsfr/user/variables_dsfr.R",encoding = "UTF-8",local=T)
 # Header de la page (NE PAS MODIFIER)
-source("user/header.R",encoding = "UTF-8",local=T)
+source("rshiny_dsfr/user/header.R",encoding = "UTF-8",local=T)
 # Footer de la page (NE PAS MODIFIER)
-source("user/footer.R",encoding = "UTF-8",local=T)
+source("rshiny_dsfr/user/footer.R",encoding = "UTF-8",local=T)
 #
 if (activerDSFR == "oui"){
 #################################################################################
@@ -56,14 +56,14 @@ server <- function(input, output, session) {
         tags$script(src="dsfr/dsfr/dsfr.module.js", type="module"),
         tags$script(src="dsfr/dsfr/dsfr.nomodule.js", nomodule, type="text/javascript"),
         # Mise en place mode sombre
-        includeHTML("user/displaymode.Rhtml"),
+        includeHTML("rshiny_dsfr/user/displaymode.Rhtml"),
         # Consentement des cookies
-        includeHTML("user/cookies-consent.Rhtml"),
+        includeHTML("rshiny_dsfr/user/cookies-consent.Rhtml"),
         tags$script(servicesCookies),
-        includeHTML("user/messcripts.Rhtml") 
-        
+        includeHTML("rshiny_dsfr/user/messcripts.Rhtml")
+
       )                                           #    rest of the page to this output$
-      
+
    )
 
    # load server code for page specified in URL
@@ -84,11 +84,11 @@ server <- function(input, output, session) {
              tags$ol(class="fr-breadcrumb__list",
                tags$li(tags$a(class="fr-breadcrumb__link", href="/", "Accueil")),
                tags$li(tags$a(class="fr-breadcrumb__link", "Page non trouvée"))
-             )                
+             )
            )
-         ),  
+         ),
          tags$div(class="fr-grid-row fr-grid-row--center fr-grid-row--gutters  fr-mb-3v",
-           tags$div(class="fr-col-12 fr-col-md-8", 
+           tags$div(class="fr-col-12 fr-col-md-8",
              tags$div(
                tags$h1(class="fr-h1", "Page non trouvée"),
                tags$p(class="fr-text--sm", "ERREUR 404"),
@@ -99,7 +99,7 @@ server <- function(input, output, session) {
            tags$div(class="fr-col-12 fr-col-md-4",
              tags$img(src="img/error_img.png", width="308", alt=""),
            ),
-           tags$a(href="/", tags$button(id="home", class="fr-btn", "Page d'accueil")), " ", tags$a(href="mailto:", style="background-image:none;", tags$button(class="fr-btn fr-btn--secondary", "Nous contacter")) 
+           tags$a(href="/", tags$button(id="home", class="fr-btn", "Page d'accueil")), " ", tags$a(href="mailto:", style="background-image:none;", tags$button(class="fr-btn fr-btn--secondary", "Nous contacter"))
          ),
          tags$br(),
        )
