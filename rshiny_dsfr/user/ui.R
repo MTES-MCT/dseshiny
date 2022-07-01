@@ -3,3 +3,5 @@ output$pageStub <- renderUI(fluidPage(tags$div(class='fr-container fr-py-16v',
                                                         numericInput('n', 'Number of obs', 100),
                                                         plotOutput(plot)
 )))
+
+

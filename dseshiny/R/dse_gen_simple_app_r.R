@@ -3,7 +3,7 @@
 #'
 #' @param chemin une chaine de caracteres qui indique ou construire l application
 #'
-#' @return la fonction construit un repertoire qui contient l'application
+#' @return la fonction construit un repertoire qui contient l'application après avoir été dézippée
 #' @import stringr zip
 #' @export
 

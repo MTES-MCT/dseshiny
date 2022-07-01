@@ -10,11 +10,11 @@ library(shiny)
 # Mettre vos librairies ci-dessous
 
 # Configuration des variables du DSFR et des composants à afficher
-source("rshiny_dsfr/user/variables_dsfr.R",encoding = "UTF-8",local=T)
+source("user/variables_dsfr.R",encoding = "UTF-8",local=T)
 # Header de la page (NE PAS MODIFIER)
-source("rshiny_dsfr/user/header.R",encoding = "UTF-8",local=T)
+source("user/header.R",encoding = "UTF-8",local=T)
 # Footer de la page (NE PAS MODIFIER)
-source("rshiny_dsfr/user/footer.R",encoding = "UTF-8",local=T)
+source("user/footer.R",encoding = "UTF-8",local=T)
 #
 if (activerDSFR == "oui"){
 #################################################################################
@@ -56,11 +56,11 @@ server <- function(input, output, session) {
         tags$script(src="dsfr/dsfr/dsfr.module.js", type="module"),
         tags$script(src="dsfr/dsfr/dsfr.nomodule.js", nomodule, type="text/javascript"),
         # Mise en place mode sombre
-        includeHTML("rshiny_dsfr/user/displaymode.Rhtml"),
+        includeHTML("user/displaymode.Rhtml"),
         # Consentement des cookies
-        includeHTML("rshiny_dsfr/user/cookies-consent.Rhtml"),
+        includeHTML("user/cookies-consent.Rhtml"),
         tags$script(servicesCookies),
-        includeHTML("rshiny_dsfr/user/messcripts.Rhtml")
+        includeHTML("user/messcripts.Rhtml")
 
       )                                           #    rest of the page to this output$
 
