@@ -7,6 +7,7 @@
 #' @import stringr zip
 #' @export
 
+library(stringr)
 
 dse_gen_simple_app_r <- function(chemin){
   if (dir.exists(chemin)) {
