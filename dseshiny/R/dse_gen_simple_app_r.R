@@ -14,8 +14,8 @@ dse_gen_simple_app_r <- function(chemin){
     print("Le chemin fournit en parametre de la fonction existe deja, veuillez fournir un chemin qui n existe pas deja")
   } else {
     dir.create(chemin)
-    file.copy(from=system.file("shiny_default_app","shiny_default_app.zip"  ,package = "dseshiny"),to=str_c(chemin,"/shiny_default_app.zip"))
-    unzip(str_c(chemin,"/","shiny_default_app.zip"), exdir = chemin)
+    file.copy(from=system.file("inst","shiny_default_app.zip"  ,package = "dseshiny"),to=str_c(chemin,"/shiny_default_app.zip"))
+    unzip(str_c(chemin,"/shiny_default_app.zip"), exdir = chemin)
   }
 
 }
