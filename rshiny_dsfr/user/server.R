@@ -1,1 +1,0 @@
-output$plot <- renderPlot({ hist(runif(input$n)) })
