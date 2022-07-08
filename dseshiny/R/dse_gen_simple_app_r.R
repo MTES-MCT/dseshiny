@@ -7,15 +7,17 @@
 #' @import stringr zip
 #' @export
 
-library(stringr)
 
+repertoire_installation <- "C:/TEST"
 dse_gen_simple_app_r <- function(chemin){
   if (dir.exists(chemin)) {
     print("Le chemin fournit en parametre de la fonction existe deja, veuillez fournir un chemin qui n existe pas deja")
   } else {
     dir.create(chemin)
-    file.copy(from=system.file("shiny_default_app.zip"  ,package = "dseshiny"),to= chemin)
+    file.copy("C:/Travail/package3/dseshiny/dseshiny/inst/shiny_default_app.zip", chemin)
     unzip(str_c(chemin,"/","shiny_default_app.zip"), exdir = chemin)
+
+
   }
 
 }
