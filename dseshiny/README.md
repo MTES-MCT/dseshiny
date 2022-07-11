@@ -37,7 +37,7 @@ L'ouvrir
 
 ![](inst/README.md.newproject4.png)
 
-### Puis lancer le app.R pour voir à quoi ça ressemble
+### Puis lancer run app dans le app.R pour voir à quoi ça ressemble
 
 ![](inst/README.md.newproject5.png)
 ![](inst/README.md.newproject6.png)
