@@ -23,21 +23,24 @@ library(dseshiny)
 dse_gen_simple_app_r("c:/monapplishinydsecompliant")
 ```
 
-![](inst/img/README.md.nouveauprojet.PNG)
+![](inst/README.md.newproject.png)
+![](inst/README.md.newproject2.png)
 
 
 ### Un répertoire "shiny_default_app est généré dans le répertoire de l'appli
 
 L'ouvrir
 ```
-![](inst/img/README.md.nouveauprojet-2.PNG)
+![](inst/README.md.newproject3.png)
 
 ### Il suffit d'ouvrir le fichier rdsfr.Rproj avec Rstudio
 
-![](inst/img/README.md.nouveauprojet-3.PNG)
+![](inst/README.md.newproject4.png)
 
 ### Puis lancer le app.R pour voir à quoi ça ressemble
 
-![](inst/img/README.md.nouveauprojet-4.PNG)
+![](inst/README.md.newproject5.png)
+![](inst/README.md.newproject6.png)
+
 
 ### il n'y a plus qu'à s'occuper du contenu
