@@ -3,3 +3,4 @@
 export()
 import(stringr)
 import(zip)
+importFrom("utils", "download.file")
