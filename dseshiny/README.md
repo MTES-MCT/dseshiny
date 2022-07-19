@@ -16,24 +16,30 @@ devtools::install_gitlab(
 ## Générer une appli RShiny
 
 Construit localement une appli dans un répertoire qui n'existe pas
+Ouvrir le fichier dse_gen_simple_app_r.R (dans le répertoire R) et renseigner la variable "fichier", étant le chemin du fichier zip shiny_default_app.zip 
 ```
 library(dseshiny)
 dse_gen_simple_app_r("c:/monapplishinydsecompliant")
 ```
 
-![](inst/img/README.md.nouveauprojet.PNG)
+![](inst/README.md.newproject.png)
+![](inst/README.md.newproject2.png)
 
 
-### Un fichier .Rproj est généré dans le répertoire de l'appli
+### Un répertoire "shiny_default_app est généré dans le répertoire de l'appli
 
-![](inst/img/README.md.nouveauprojet-2.PNG)
+L'ouvrir
 
-### Il suffit de l'ouvrir avec Rstudio
+![](inst/README.md.newproject3.png)
 
-![](inst/img/README.md.nouveauprojet-3.PNG)
+### Il suffit d'ouvrir le fichier rdsfr.Rproj avec Rstudio
 
-### Puis lancer le app.R pour voir à quoi ça ressemble
+![](inst/README.md.newproject4.png)
 
-![](inst/img/README.md.nouveauprojet-4.PNG)
+### Puis lancer run app dans le app.R pour voir à quoi ça ressemble
+
+![](inst/README.md.newproject5.png)
+![](inst/README.md.newproject6.png)
+
 
 ### il n'y a plus qu'à s'occuper du contenu
