@@ -29,7 +29,7 @@ dse_gen_simple_app_r("c:/monapplishinydsecompliant")
 ### Un répertoire "shiny_default_app est généré dans le répertoire de l'appli
 
 L'ouvrir
-```
+
 ![](inst/README.md.newproject3.png)
 
 ### Il suffit d'ouvrir le fichier rdsfr.Rproj avec Rstudio
