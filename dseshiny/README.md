@@ -19,7 +19,6 @@ Construit localement une appli dans un répertoire qui n'existe pas
 Ouvrir le fichier dse_gen_simple_app_r.R (dans le répertoire R) et renseigner la variable "fichier", étant le chemin du fichier zip shiny_default_app.zip 
 ```
 library(dseshiny)
-#modifier dse_gen_simple_app_r.R
 dse_gen_simple_app_r("c:/monapplishinydsecompliant")
 ```
 
